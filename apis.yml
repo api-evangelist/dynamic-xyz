@@ -1,0 +1,29 @@
+aid: dynamic-xyz
+url: https://raw.githubusercontent.com/api-evangelist/dynamic-xyz/refs/heads/main/apis.yml
+name: Dynamic
+x-type: company
+description: >-
+  Dynamic is a wallet auth and onboarding SDK for Web3 apps with embedded wallets, multi-chain support, and a powerful admin dashboard for configuring login flows.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Web3
+  - Wallet
+  - Auth
+  - Onboarding
+  - Multi-Chain
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.dynamic.xyz/
+  - type: Plans
+    url: plans/dynamic-xyz-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/dynamic-xyz-rate-limits.yml
+  - type: FinOps
+    url: finops/dynamic-xyz-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
