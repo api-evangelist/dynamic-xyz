@@ -2,28 +2,65 @@ aid: dynamic-xyz
 url: https://raw.githubusercontent.com/api-evangelist/dynamic-xyz/refs/heads/main/apis.yml
 name: Dynamic
 x-type: company
-description: >-
-  Dynamic is a wallet auth and onboarding SDK for Web3 apps with embedded wallets, multi-chain support, and a powerful admin dashboard for configuring login flows.
+description: Dynamic is a wallet and authentication platform offering embedded wallets,
+  social/email/passkey login, MPC signers, and a Backend / Admin REST API for managing
+  users, wallets, and sessions. Provides SDKs across Web, React, React Native, Flutter,
+  Swift, Kotlin, Node.js, Unity.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Web3
-  - Wallet
-  - Auth
-  - Onboarding
-  - Multi-Chain
+- Web3
+- Wallets
+- Authentication
+- Embedded Wallets
+- MPC
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+- aid: dynamic:backend-api
+  name: Dynamic Backend API
+  description: 'REST API for backend integrations: list users and wallets, manage
+    policies, validate JWTs, fetch auth events, manage environments.'
+  humanURL: https://docs.dynamic.xyz/api-reference/overview
+  baseURL: https://app.dynamicauth.com/api/v0
+  tags:
+  - REST
+  - Admin
+  properties:
+  - type: Documentation
+    url: https://docs.dynamic.xyz/api-reference/overview
+- aid: dynamic:wallets-api
+  name: Dynamic Wallets API
+  description: REST API to provision, sign, and manage server-controlled wallets across
+    EVM, Solana, and other chains.
+  humanURL: https://docs.dynamic.xyz/wallets/server-wallets/overview
+  baseURL: https://app.dynamicauth.com/api/v0
+  tags:
+  - REST
+  - Wallets
+  properties:
+  - type: Documentation
+    url: https://docs.dynamic.xyz/wallets/server-wallets/overview
+- aid: dynamic:webhooks
+  name: Dynamic Webhooks
+  description: Webhook delivery of auth, user, wallet, and session events. Subscriptions
+    managed through dashboard and Backend API.
+  humanURL: https://docs.dynamic.xyz/developer-dashboard/webhooks
+  baseURL: https://app.dynamicauth.com/api/v0
+  tags:
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.dynamic.xyz/developer-dashboard/webhooks
 common:
-  - type: Website
-    url: https://www.dynamic.xyz/
-  - type: Plans
-    url: plans/dynamic-xyz-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/dynamic-xyz-rate-limits.yml
-  - type: FinOps
-    url: finops/dynamic-xyz-finops.yml
+- type: Website
+  url: https://www.dynamic.xyz/
+- type: Plans
+  url: plans/dynamic-xyz-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/dynamic-xyz-rate-limits.yml
+- type: FinOps
+  url: finops/dynamic-xyz-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

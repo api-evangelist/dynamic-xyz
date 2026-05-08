@@ -5,20 +5,20 @@ provider: Dynamic
 providerId: dynamic-xyz
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - Web3
-- Wallet
-- Auth
-- Onboarding
-- Multi-Chain
+- Wallets
+- Authentication
+- Embedded Wallets
+- MPC
 - FinOps
-- Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Dynamic. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: Dynamic bills as monthly subscription with MAU-based overages and add-on
+  features (server wallets, advanced auth).
+notes: Usage in Dynamic dashboard.
 sources:
-- https://www.dynamic.xyz/
+- https://www.dynamic.xyz/pricing
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -26,41 +26,46 @@ alignedWith:
   dataSpec: FOCUS
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
-publisherName: Dynamic
+publisherName: Dynamic Labs, Inc.
 serviceCategory: Web3
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription + MAU
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
   - Usage
   - Purchase
-  - Adjustment
 focusColumns:
   ServiceName: Dynamic
   ServiceCategory: Web3
   ProviderName: Dynamic
-  PublisherName: Dynamic
-  InvoiceIssuerName: Dynamic
+  PublisherName: Dynamic Labs
+  InvoiceIssuerName: Dynamic Labs
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: monthly_active_users
+  description: Distinct users active per month.
+  unit: user
+  aggregation: count_distinct
+  dimensions:
+  - environment
+- name: wallet_signs
+  description: Wallet signing operations.
+  unit: operation
   aggregation: sum
   dimensions:
-  - account
-  - resource
+  - environment
+  - wallet
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Dynamic dashboard surfaces MAU per environment.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Environment-per-product/env.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Long-lived sessions; consolidate environments.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Project owners review MAU vs plan.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
