@@ -1,7 +1,7 @@
 aid: dynamic-xyz
 url: https://raw.githubusercontent.com/api-evangelist/dynamic-xyz/refs/heads/main/apis.yml
 name: Dynamic
-x-type: company
+kind: company
 description: Dynamic is a wallet and authentication platform offering embedded wallets,
   social/email/passkey login, MPC signers, and a Backend / Admin REST API for managing
   users, wallets, and sessions. Provides SDKs across Web, React, React Native, Flutter,
