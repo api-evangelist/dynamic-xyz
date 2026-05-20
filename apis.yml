@@ -8,61 +8,65 @@ description: Dynamic is a wallet and authentication platform offering embedded w
   Swift, Kotlin, Node.js, Unity.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Web3
-- Wallets
-- Authentication
-- Embedded Wallets
-- MPC
+  - Web3
+  - Wallets
+  - Authentication
+  - Embedded Wallets
+  - MPC
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-- aid: dynamic:backend-api
-  name: Dynamic Backend API
-  description: 'REST API for backend integrations: list users and wallets, manage
-    policies, validate JWTs, fetch auth events, manage environments.'
-  humanURL: https://docs.dynamic.xyz/api-reference/overview
-  baseURL: https://app.dynamicauth.com/api/v0
-  tags:
-  - REST
-  - Admin
-  properties:
-  - type: Documentation
-    url: https://docs.dynamic.xyz/api-reference/overview
-- aid: dynamic:wallets-api
-  name: Dynamic Wallets API
-  description: REST API to provision, sign, and manage server-controlled wallets across
-    EVM, Solana, and other chains.
-  humanURL: https://docs.dynamic.xyz/wallets/server-wallets/overview
-  baseURL: https://app.dynamicauth.com/api/v0
-  tags:
-  - REST
-  - Wallets
-  properties:
-  - type: Documentation
-    url: https://docs.dynamic.xyz/wallets/server-wallets/overview
-- aid: dynamic:webhooks
-  name: Dynamic Webhooks
-  description: Webhook delivery of auth, user, wallet, and session events. Subscriptions
-    managed through dashboard and Backend API.
-  humanURL: https://docs.dynamic.xyz/developer-dashboard/webhooks
-  baseURL: https://app.dynamicauth.com/api/v0
-  tags:
-  - Webhooks
-  properties:
-  - type: Documentation
-    url: https://docs.dynamic.xyz/developer-dashboard/webhooks
+  - aid: dynamic:backend-api
+    name: Dynamic Backend API
+    description: 'REST API for backend integrations: list users and wallets, manage
+      policies, validate JWTs, fetch auth events, manage environments.'
+    humanURL: https://docs.dynamic.xyz/api-reference/overview
+    baseURL: https://app.dynamicauth.com/api/v0
+    tags:
+    - REST
+    - Admin
+    properties:
+    - type: Documentation
+      url: https://docs.dynamic.xyz/api-reference/overview
+  - aid: dynamic:wallets-api
+    name: Dynamic Wallets API
+    description: REST API to provision, sign, and manage server-controlled wallets across
+      EVM, Solana, and other chains.
+    humanURL: https://docs.dynamic.xyz/wallets/server-wallets/overview
+    baseURL: https://app.dynamicauth.com/api/v0
+    tags:
+    - REST
+    - Wallets
+    properties:
+    - type: Documentation
+      url: https://docs.dynamic.xyz/wallets/server-wallets/overview
+  - aid: dynamic:webhooks
+    name: Dynamic Webhooks
+    description: Webhook delivery of auth, user, wallet, and session events. Subscriptions
+      managed through dashboard and Backend API.
+    humanURL: https://docs.dynamic.xyz/developer-dashboard/webhooks
+    baseURL: https://app.dynamicauth.com/api/v0
+    tags:
+    - Webhooks
+    properties:
+    - type: Documentation
+      url: https://docs.dynamic.xyz/developer-dashboard/webhooks
 common:
-- type: Website
-  url: https://www.dynamic.xyz/
-- type: Plans
-  url: plans/dynamic-xyz-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/dynamic-xyz-rate-limits.yml
-- type: FinOps
-  url: finops/dynamic-xyz-finops.yml
-- type: Integrations
-  url: https://www.dynamic.xyz/partners
+  - type: GitHubOrganization
+    url: https://github.com/dynamic-labs
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/dynamiclabs
+  - type: Website
+    url: https://www.dynamic.xyz/
+  - type: Plans
+    url: plans/dynamic-xyz-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/dynamic-xyz-rate-limits.yml
+  - type: FinOps
+    url: finops/dynamic-xyz-finops.yml
+  - type: Integrations
+    url: https://www.dynamic.xyz/partners
 integrations:
   - name: Gizmolab
   - name: Caldera
@@ -82,5 +86,5 @@ integrations:
   - name: Yuki
   - name: 'Co:create'
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
