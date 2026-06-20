@@ -6,7 +6,7 @@ description: Dynamic is a wallet and authentication platform offering embedded w
   social/email/passkey login, MPC signers, and a Backend / Admin REST API for managing
   users, wallets, and sessions. Provides SDKs across Web, React, React Native, Flutter,
   Swift, Kotlin, Node.js, Unity.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Web3
   - Wallets
