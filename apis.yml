@@ -53,6 +53,8 @@ apis:
     - type: Documentation
       url: https://docs.dynamic.xyz/developer-dashboard/webhooks
 common:
+  - type: AgenticAccess
+    url: agentic-access/dynamic-xyz-agentic-access.yml
   - type: TrustCenter
     url: security/dynamic-xyz-trust-center.yml
   - type: VulnerabilityDisclosure
