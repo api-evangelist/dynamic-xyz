@@ -1,0 +1,236 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Analytics API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "getWalletsBreakdown",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/wallets",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Fetch wallets breakdown"
+        },
+        {
+          "info": {
+            "name": "getVisitAnalytics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/visits",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Fetch visit analytics"
+        },
+        {
+          "info": {
+            "name": "Get analytics overview data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/overview",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "granularity",
+                "value": "",
+                "type": "query",
+                "description": "Time granularity for the data"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get analytics overview data"
+        },
+        {
+          "info": {
+            "name": "Get analytics topline data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/topline",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO format (YYYY-MM-DD)"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get analytics topline data"
+        },
+        {
+          "info": {
+            "name": "Get analytics engagement data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/engagement",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO format (YYYY-MM-DD)"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get analytics engagement data"
+        },
+        {
+          "info": {
+            "name": "Get analytics wallets breakdown data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/analytics/walletsBreakdown",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "Start date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query",
+                "description": "End date in ISO format (YYYY-MM-DD)"
+              },
+              {
+                "name": "chain",
+                "value": "",
+                "type": "query",
+                "description": "Blockchain chain name"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get analytics wallets breakdown data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

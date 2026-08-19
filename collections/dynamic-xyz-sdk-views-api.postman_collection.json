@@ -1,0 +1,945 @@
+{
+  "item": [
+    {
+      "id": "3a3f0db9-997c-48d0-be7a-ad46bec7fd25",
+      "name": "SDK Views",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "63c25b61-4e9a-4b60-8192-0ebd871a8c64",
+          "name": "Get the sdk views for an environment",
+          "request": {
+            "name": "Get the sdk views for an environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "sdkViews"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "518a30b4-56f6-4b8b-a650-e9f09ec0735b",
+              "name": "List of sdk views for this project environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"sdkViews\": [\n    {\n      \"type\": \"login\",\n      \"sections\": [\n        {\n          \"type\": \"social\",\n          \"label\": \"string\",\n          \"numOfItemsToDisplay\": 3008,\n          \"defaultItem\": \"string\",\n          \"alignment\": \"left\"\n        },\n        {\n          \"type\": \"emailAndPhone\",\n          \"label\": \"string\",\n          \"numOfItemsToDisplay\": 6339,\n          \"defaultItem\": \"string\",\n          \"alignment\": \"left\"\n        }\n      ]\n    },\n    {\n      \"type\": \"login\",\n      \"sections\": [\n        {\n          \"type\": \"wallet\",\n          \"label\": \"string\",\n          \"numOfItemsToDisplay\": 8947,\n          \"defaultItem\": \"string\",\n          \"alignment\": \"left\"\n        },\n        {\n          \"type\": \"phone\",\n          \"label\": \"string\",\n          \"numOfItemsToDisplay\": 240,\n          \"defaultItem\": \"string\",\n          \"alignment\": \"center\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2f245add-cda0-44b8-b004-5a3fafe06e5d",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b13b3a8a-08e1-4bb6-913f-d03ae1c0c65c",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8938a980-790e-46d9-aabd-167d2150622e",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0712be3a-4739-4b44-bc25-cbbbfc29d6cc",
+          "name": "Get a sdk view given a type and environment",
+          "request": {
+            "name": "Get a sdk view given a type and environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "sdkViews",
+                ":sdkViewType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sdkViewType",
+                  "description": "(Required) Type of sdk view"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "98fe28b7-e1c5-4637-ae2f-5fa7a2ae2750",
+              "name": "Sdk view for that type and project environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"<string>\",\n  \"sections\": [\n    {\n      \"type\": \"text\",\n      \"label\": \"string\",\n      \"numOfItemsToDisplay\": 6800,\n      \"defaultItem\": \"string\",\n      \"alignment\": \"left\"\n    },\n    {\n      \"type\": \"passkey\",\n      \"label\": \"string\",\n      \"numOfItemsToDisplay\": 8065,\n      \"defaultItem\": \"string\",\n      \"alignment\": \"right\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "df9b4868-db84-48c8-8066-6145b2ac893f",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2d835437-3def-43ba-93c2-2055b613d401",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4ec38f34-7a23-45b3-bc73-d12ec6926015",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8313da8-9b60-4fb3-b65c-dcb7a9e7f3d0",
+          "name": "Updates the configs for the sdk view and project environment",
+          "request": {
+            "name": "Updates the configs for the sdk view and project environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "sdkViews",
+                ":sdkViewType"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sdkViewType",
+                  "description": "(Required) Type of sdk view"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9f912789-a9ca-4ab9-90d0-7be355ecf916",
+              "name": "Successfully created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"type\": \"<string>\",\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "970d761e-ae57-44d9-b13b-1748daefc31c",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6005e123-ac07-44d3-ab2b-22be66de8419",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "38400ee1-60e0-420f-87bb-29fca1fef873",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "76101628-3933-4194-87ce-b209ecf15654",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"email_cannot_be_null\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"zksync\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"farcaster\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"0WZQ7TD@emCqltde.qwfz\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"2008-05-29T10:31:31.080Z\",\n        \"lastVisit\": \"2019-06-01T10:34:18.245Z\",\n        \"newUser\": true,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": false,\n        \"discordNotification\": true,\n        \"newsletterNotification\": true,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "50e6a1e2-41bc-4fce-8f3a-2c4a6865fcec",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "sdkViews",
+                    ":sdkViewType"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sdkViewType",
+                      "description": "(Required) Type of sdk view"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sections\": [\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    },\n    {\n      \"type\": \"<string>\",\n      \"label\": \"<string>\",\n      \"numOfItemsToDisplay\": \"<integer>\",\n      \"defaultItem\": \"<string>\",\n      \"alignment\": \"<string>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.dynamicauth.com/api/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ccbb948c-30d2-43db-a633-631943184722",
+    "name": "Dashboard Allowlists SDK Views API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Dashboard API documentation",
+      "type": "text/plain"
+    }
+  }
+}

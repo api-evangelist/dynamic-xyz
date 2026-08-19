@@ -1,0 +1,1785 @@
+{
+  "item": [
+    {
+      "id": "7eef7e8b-060c-462a-baed-dd6abb8d658e",
+      "name": "GlobalWallets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "500aaee4-deb2-4975-bec8-4a37921396e0",
+          "name": "Creates the global wallet settings for the environment",
+          "request": {
+            "name": "Creates the global wallet settings for the environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "globalWallet",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"walletName\": \"<string>\",\n  \"popupPageTitle\": \"<string>\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"<string>\",\n  \"privacyPolicyUrl\": \"<string>\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"<string>\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c1261450-ed54-4612-9d08-85de743376a4",
+              "name": "Successfully created global wallet settings for this environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"95b11417-f18f-457f-8804-68e361f9164f\",\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": true,\n  \"enabledAt\": \"1985-01-04T16:35:40.899Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a1450342-0753-419c-83f9-5cbe35c09e2d",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6915586a-c542-40cf-bbab-48b354a1778f",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1de234b6-ad04-4cbd-a286-319d3f5cdd89",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "35ab3d0d-25bd-4758-a2c6-ad82e7d92e80",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"user_has_already_account_with_email\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"sendgrid\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"blocto\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"lcLQ4lhQhmD@iJUXltXbohSwJKicCVzciD.ngw\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"2014-05-18T10:52:12.678Z\",\n        \"lastVisit\": \"1983-06-06T13:41:44.071Z\",\n        \"newUser\": false,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": true,\n        \"discordNotification\": true,\n        \"newsletterNotification\": false,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "50123da7-e3c9-4778-a6d6-5f8bede04b93",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c612a1fd-0d9b-46f3-98f1-346b04137311",
+          "name": "Get the global wallet settings for environment",
+          "request": {
+            "name": "Get the global wallet settings for environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "globalWallet",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "484df37c-ba8a-45fd-b19b-ec73d6bd9251",
+              "name": "Returns the global wallet settings for environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"95b11417-f18f-457f-8804-68e361f9164f\",\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": true,\n  \"enabledAt\": \"1949-12-07T06:07:50.571Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6e1f9b73-0051-4a2b-9aff-c4ca83668870",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0c234153-bbfd-4dd4-9c01-c1b5217ce596",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "54cec0f7-908f-41da-a7f2-f1c2d78ac824",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Not Found\",\n  \"code\": \"not_found\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "440c0ea8-802c-458c-8629-60528dd40b69",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"no_enabled_sms_provider\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"facebook\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"bitbucket\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"zKG8PCQj@glnGIqHqnhBV.lk\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"1994-07-28T05:37:36.335Z\",\n        \"lastVisit\": \"2021-01-10T19:28:37.499Z\",\n        \"newUser\": true,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": false,\n        \"discordNotification\": false,\n        \"newsletterNotification\": false,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9aa46d53-b224-4782-a3bf-0de3255b227a",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "19da10ed-c04f-4144-9d7c-b9f2b2824377",
+          "name": "Updates the global wallet settings for the environment",
+          "request": {
+            "name": "Updates the global wallet settings for the environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "globalWallet",
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"walletName\": \"<string>\",\n  \"popupPageTitle\": \"<string>\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"<string>\",\n  \"privacyPolicyUrl\": \"<string>\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"<string>\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<string>\"\n    },\n    {\n      \"label\": \"<string>\",\n      \"url\": \"<string>\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "925ad286-6312-462b-8dae-a3f71dca06e9",
+              "name": "Successfully updated global wallet settings",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"95b11417-f18f-457f-8804-68e361f9164f\",\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": true,\n  \"enabledAt\": \"1949-12-07T06:07:50.571Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "073abfad-c6a7-4d7a-acd6-d31a33ebf390",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f43dc6b6-84b9-490b-89f1-965b7a94086f",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5ed15c0c-b308-430b-8025-e1b7752da9de",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "41f02895-1179-4331-87b1-6cf8bb5a59c4",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5a33bbb0-3a44-4aa3-a2b1-42cfa5804625",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"no_enabled_sms_provider\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"facebook\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"bitbucket\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"zKG8PCQj@glnGIqHqnhBV.lk\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"1994-07-28T05:37:36.335Z\",\n        \"lastVisit\": \"2021-01-10T19:28:37.499Z\",\n        \"newUser\": true,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": false,\n        \"discordNotification\": false,\n        \"newsletterNotification\": false,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "47300dfe-3860-4e07-be89-104b697a24c7",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "settings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "203df9fb-3a9d-44ef-818f-e9cf7788c1ea",
+          "name": "Enable global wallet for this environment",
+          "request": {
+            "name": "Enable global wallet for this environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "globalWallet",
+                "enable"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ad4a27e5-fd45-4905-ae42-d0a4e6d28cc7",
+              "name": "Enabled and returns the global wallet settings for this environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"95b11417-f18f-457f-8804-68e361f9164f\",\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": true,\n  \"enabledAt\": \"1949-12-07T06:07:50.571Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "99e3ad6d-e585-449c-8013-7094189e6945",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d94aa362-2e56-4d13-b29c-4f2210816f20",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "eec0ff73-129d-41ec-a1fc-865749b08f39",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a3db89aa-aebe-4f76-98b5-763ef021d50a",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"no_enabled_sms_provider\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"facebook\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"bitbucket\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"zKG8PCQj@glnGIqHqnhBV.lk\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"1994-07-28T05:37:36.335Z\",\n        \"lastVisit\": \"2021-01-10T19:28:37.499Z\",\n        \"newUser\": true,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": false,\n        \"discordNotification\": false,\n        \"newsletterNotification\": false,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "28ade546-4e83-4bfc-bd97-2282d42d0c11",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "enable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17081d9c-a012-4180-b7cd-f8b831eb5bf7",
+          "name": "Disabled global wallet for this environment",
+          "request": {
+            "name": "Disabled global wallet for this environment",
+            "description": {},
+            "url": {
+              "path": [
+                "environments",
+                ":environmentId",
+                "globalWallet",
+                "disable"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "environmentId",
+                  "description": "(Required) ID of the environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "08ccb6d7-872f-465c-a495-ef5e0d03667a",
+              "name": "Disables and returns the global wallet settings for this environment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"95b11417-f18f-457f-8804-68e361f9164f\",\n  \"walletName\": \"An example name\",\n  \"popupPageTitle\": \"An example name\",\n  \"walletIconUrl\": \"<string>\",\n  \"customCssUrl\": \"<string>\",\n  \"termsOfServiceUrl\": \"https://website-sample.com\",\n  \"privacyPolicyUrl\": \"https://website-sample.com\",\n  \"termsOfServiceAndPrivacyPolicyMarkdown\": \"This is a markdown example with a **bold** text and a [link](https://website-sample.com)\",\n  \"customMenuLinks\": [\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    },\n    {\n      \"label\": \"An example name\",\n      \"url\": \"https://website-sample.com\"\n    }\n  ],\n  \"enableLoginWithExternalWallets\": true,\n  \"enabledAt\": \"1949-12-07T06:07:50.571Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c3b40736-4b9d-4c34-8df0-8e5298dea9f5",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"No jwt provided!\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7c51381d-3cab-4062-8480-ebe91695601c",
+              "name": "Forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Access Forbidden\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d5db3092-9b73-4ecf-b8a8-ab1662966d52",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fec1cda8-48e8-4fa7-8245-89c531819b23",
+              "name": "Unprocessable Entity",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Resources already exists for this Object\",\n  \"code\": \"no_enabled_sms_provider\",\n  \"payload\": {\n    \"email\": \"joe@email.com\",\n    \"loginProvider\": \"facebook\",\n    \"embeddedWalletName\": \"string\",\n    \"embeddedSocialSigninProvider\": \"bitbucket\",\n    \"mergeConflicts\": {\n      \"fromUser\": {\n        \"id\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"projectEnvironmentId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"verifiedCredentials\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"lastVerifiedCredentialId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"sessionId\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"alias\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"country\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"email\": \"zKG8PCQj@glnGIqHqnhBV.lk\",\n        \"firstName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"jobTitle\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"lastName\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"phoneNumber\": \"string\",\n        \"policiesConsent\": false,\n        \"tShirtSize\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"team\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"username\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"firstVisit\": \"1994-07-28T05:37:36.335Z\",\n        \"lastVisit\": \"2021-01-10T19:28:37.499Z\",\n        \"newUser\": true,\n        \"metadata\": {},\n        \"mfaBackupCodeAcknowledgement\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"btcWallet\": \"string\",\n        \"kdaWallet\": \"string\",\n        \"ltcWallet\": \"string\",\n        \"ckbWallet\": \"string\",\n        \"kasWallet\": \"string\",\n        \"dogeWallet\": \"string\",\n        \"emailNotification\": false,\n        \"discordNotification\": false,\n        \"newsletterNotification\": false,\n        \"lists\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"scope\": \"superuser marketing operations\",\n        \"missingFields\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ]\n      },\n      \"conflicts\": [\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        {\n          \"field\": {\n            \"name\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"enabled\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"unique\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"verify\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"type\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationRules\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"validationType\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"label\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"position\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"fromUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"currentUser\": {\n            \"userId\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"value\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        }\n      ]\n    },\n    \"additionalMessages\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7d8b298b-ee90-430e-86b3-ac2b6b9eec92",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "environments",
+                    ":environmentId",
+                    "globalWallet",
+                    "disable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "environmentId",
+                      "description": "(Required) ID of the environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal Server Error\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.dynamicauth.com/api/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "741f3188-e1d1-465a-9ad9-7d17f1c9f6db",
+    "name": "Dashboard Allowlists GlobalWallets API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Dashboard API documentation",
+      "type": "text/plain"
+    }
+  }
+}

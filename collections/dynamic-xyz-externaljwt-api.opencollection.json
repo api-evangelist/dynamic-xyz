@@ -1,0 +1,45 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists ExternalJwt API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ExternalJwt",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check if the external provided JWT is valid for the specified environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/externalJwt/check",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Check if the external provided JWT is valid for the specified environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

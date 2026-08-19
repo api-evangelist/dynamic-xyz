@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists SDK Views API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "SDK Views",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the sdk views for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/sdkViews",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the sdk views for an environment"
+        },
+        {
+          "info": {
+            "name": "Get a sdk view given a type and environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/sdkViews/:sdkViewType",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "sdkViewType",
+                "value": "",
+                "type": "path",
+                "description": "Type of sdk view"
+              }
+            ]
+          },
+          "docs": "Get a sdk view given a type and environment"
+        },
+        {
+          "info": {
+            "name": "Updates the configs for the sdk view and project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/sdkViews/:sdkViewType",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "sdkViewType",
+                "value": "",
+                "type": "path",
+                "description": "Type of sdk view"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the configs for the sdk view and project environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

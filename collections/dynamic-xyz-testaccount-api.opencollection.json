@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists TestAccount API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TestAccount",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the test account for this environemnt",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/test/account",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the test account for this environemnt"
+        },
+        {
+          "info": {
+            "name": "Create a new test account for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/test/account",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Create a new test account for this environment"
+        },
+        {
+          "info": {
+            "name": "Delete the test account for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/test/account",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Delete the test account for this environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

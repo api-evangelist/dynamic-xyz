@@ -1,0 +1,320 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Settings API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Settings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the exchanges for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/settings/exchanges",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the exchanges for an environment"
+        },
+        {
+          "info": {
+            "name": "Creates a new exchange for the project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/settings/exchanges",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new exchange for the project environment"
+        },
+        {
+          "info": {
+            "name": "Gets an exchange",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/settings/exchanges/:exchangeId",
+            "params": [
+              {
+                "name": "exchangeId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the exchange"
+              }
+            ]
+          },
+          "docs": "Gets an exchange"
+        },
+        {
+          "info": {
+            "name": "Delete an exchange by exchangeId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/settings/exchanges/:exchangeId",
+            "params": [
+              {
+                "name": "exchangeId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the exchange"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete an exchange by exchangeId"
+        },
+        {
+          "info": {
+            "name": "Enable the exchange for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/settings/exchanges/:exchangeId/enable",
+            "params": [
+              {
+                "name": "exchangeId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the exchange"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Enable the exchange for the environment"
+        },
+        {
+          "info": {
+            "name": "Disable the exchange for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/settings/exchanges/:exchangeId/disable",
+            "params": [
+              {
+                "name": "exchangeId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the exchange"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Disable the exchange for the environment"
+        },
+        {
+          "info": {
+            "name": "Get the providers for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/settings/providers",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the providers for an environment"
+        },
+        {
+          "info": {
+            "name": "Creates a new provider for the project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/settings/providers",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new provider for the project environment"
+        },
+        {
+          "info": {
+            "name": "Get the URLs for the environment providers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/settings/providers/urls",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the URLs for the environment providers"
+        },
+        {
+          "info": {
+            "name": "Gets a provider",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/settings/providers/:providerId",
+            "params": [
+              {
+                "name": "providerId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the provider"
+              }
+            ]
+          },
+          "docs": "Gets a provider"
+        },
+        {
+          "info": {
+            "name": "Updates a provider",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/settings/providers/:providerId",
+            "params": [
+              {
+                "name": "providerId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the provider"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates a provider"
+        },
+        {
+          "info": {
+            "name": "Delete a provider by providerId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/settings/providers/:providerId",
+            "params": [
+              {
+                "name": "providerId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the provider"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a provider by providerId"
+        },
+        {
+          "info": {
+            "name": "Enable the provider for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/settings/providers/:providerId/enable",
+            "params": [
+              {
+                "name": "providerId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the provider"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Enable the provider for the environment"
+        },
+        {
+          "info": {
+            "name": "Disable the provider for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/settings/providers/:providerId/disable",
+            "params": [
+              {
+                "name": "providerId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the provider"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Disable the provider for the environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

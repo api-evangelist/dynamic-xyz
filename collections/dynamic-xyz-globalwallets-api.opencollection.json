@@ -1,0 +1,121 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists GlobalWallets API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GlobalWallets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the global wallet settings for environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/settings",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the global wallet settings for environment"
+        },
+        {
+          "info": {
+            "name": "Creates the global wallet settings for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/settings",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates the global wallet settings for the environment"
+        },
+        {
+          "info": {
+            "name": "Updates the global wallet settings for the environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/settings",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates the global wallet settings for the environment"
+        },
+        {
+          "info": {
+            "name": "Enable global wallet for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/enable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Enable global wallet for this environment"
+        },
+        {
+          "info": {
+            "name": "Disabled global wallet for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/disable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Disabled global wallet for this environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

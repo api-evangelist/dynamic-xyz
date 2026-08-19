@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists WalletConnect API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "WalletConnect",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create or update a WalletConnect project for this environment using the partner API",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/walletConnect/projects",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create or update a WalletConnect project for this environment using the partner API"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,99 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists MfaSettings API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "MfaSettings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all mfa settings for an organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/organizations/:organizationId/mfaSettings",
+            "params": [
+              {
+                "name": "organizationId",
+                "value": "",
+                "type": "path",
+                "description": "ID of organization"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all mfa settings for an organization"
+        },
+        {
+          "info": {
+            "name": "Enable the given mfa device for the organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/organizations/:organizationId/mfaSettings/:mfaDeviceType/enable",
+            "params": [
+              {
+                "name": "organizationId",
+                "value": "",
+                "type": "path",
+                "description": "ID of organization"
+              },
+              {
+                "name": "mfaDeviceType",
+                "value": "",
+                "type": "path",
+                "description": "MFA device type"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Enable the given mfa device for the organization"
+        },
+        {
+          "info": {
+            "name": "Disable the given mfa device for the organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/organizations/:organizationId/mfaSettings/:mfaDeviceType/disable",
+            "params": [
+              {
+                "name": "organizationId",
+                "value": "",
+                "type": "path",
+                "description": "ID of organization"
+              },
+              {
+                "name": "mfaDeviceType",
+                "value": "",
+                "type": "path",
+                "description": "MFA device type"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Disable the given mfa device for the organization"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,373 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Wallets API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Wallets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Creates a new embedded wallet for a user given an identifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/embeddedWallets",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a new embedded wallet for a user given an email or userId. If an email is provided and it is not associated with an existing user this call will also create a new user."
+        },
+        {
+          "info": {
+            "name": "Get the active embedded wallet versions for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/embeddedWalletVersions",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get the active embedded wallet versions for an environment"
+        },
+        {
+          "info": {
+            "name": "Creates a new embedded wallet. This API is meant to be called from a frame server.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/embeddedWallets/farcaster",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a new embedded wallet. This API is meant to be called from a frame server."
+        },
+        {
+          "info": {
+            "name": "Get wallets by user (deprecated - use /environments/{environmentId}/users/{userId}/wallets instead)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/users/:userId/wallets",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the user"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get wallets by user (deprecated - use /environments/{environmentId}/users/{userId}/wallets instead)"
+        },
+        {
+          "info": {
+            "name": "Creates a new wallet for the user (deprecated - use /environments/{environmentId}/users/{userId}/wallets instead)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/users/:userId/wallets",
+            "params": [
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the user"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a new wallet for the user. Note that this API is not meant for creating embedded wallets. To create embedded wallets use the /embeddedWallets endpoint."
+        },
+        {
+          "info": {
+            "name": "Get wallets by user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/users/:userId/wallets",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the user"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get wallets by user"
+        },
+        {
+          "info": {
+            "name": "Creates a new wallet for the user. Note that if the user already has an embedded wallet linked, this call will fail.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/users/:userId/wallets",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "userId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the user"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a new wallet for the user. Note that this API is not meant for creating embedded wallets. To create embedded wallets use the /embeddedWallets endpoint."
+        },
+        {
+          "info": {
+            "name": "Get a wallet using the ID (deprecated - use /environments/{environmentId}/wallets/{walletId} instead)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/wallets/:walletId",
+            "params": [
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get a wallet using the ID (deprecated - use /environments/{environmentId}/wallets/{walletId} instead)"
+        },
+        {
+          "info": {
+            "name": "Delete wallet (deprecated - use /environments/{environmentId}/wallets/{walletId} instead)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/wallets/:walletId",
+            "params": [
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete wallet (deprecated - use /environments/{environmentId}/wallets/{walletId} instead)"
+        },
+        {
+          "info": {
+            "name": "Get wallets by environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/wallets",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of wallets to return"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Number of wallets to skip"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieve wallets for a specified environment"
+        },
+        {
+          "info": {
+            "name": "Get a wallet using the ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/wallets/:walletId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get a wallet using the ID"
+        },
+        {
+          "info": {
+            "name": "Delete wallet",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/wallets/:walletId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete wallet"
+        },
+        {
+          "info": {
+            "name": "Recover deleted wallets for a user in a specific environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/wallets/recover",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Recovers deleted wallets for a user in a specified environment by setting deleted_at to null. This undoes the soft deletion of wallets, wallet additional addresses, and turnkey HD wallets."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

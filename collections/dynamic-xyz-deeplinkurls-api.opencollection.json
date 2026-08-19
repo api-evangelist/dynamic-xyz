@@ -1,0 +1,91 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists DeeplinkUrls API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DeeplinkUrls",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all the whitelisted mobile deeplink URLs for a project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/deeplinkUrls",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all the whitelisted mobile deeplink URLs for a project environment"
+        },
+        {
+          "info": {
+            "name": "Whitelists a mobile deeplink URL for this project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/deeplinkUrls",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Whitelists a mobile deeplink URL for this project environment"
+        },
+        {
+          "info": {
+            "name": "Delete a mobile deeplink URL by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/deeplinkUrls/:deeplinkUrlId",
+            "params": [
+              {
+                "name": "deeplinkUrlId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the mobile deeplink URL"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a mobile deeplink URL by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

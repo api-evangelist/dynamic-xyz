@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists CustomHostnames API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CustomHostnames",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delete the custom hostname",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/custom/hostnames/:customHostnameId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "customHostnameId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the custom hostname"
+              }
+            ]
+          },
+          "docs": "Delete the custom hostname"
+        },
+        {
+          "info": {
+            "name": "Get the custom hostnames for this environemnt",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/custom/hostnames",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the custom hostnames for this environemnt"
+        },
+        {
+          "info": {
+            "name": "Create a new custom hostname for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/custom/hostnames",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new custom hostname for this environment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

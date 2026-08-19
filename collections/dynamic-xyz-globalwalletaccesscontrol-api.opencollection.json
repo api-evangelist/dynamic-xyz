@@ -1,0 +1,189 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists GlobalWalletAccessControl API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GlobalWalletAccessControl",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all the global wallet access control domains for a project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all the global wallet access control domains for a project environment"
+        },
+        {
+          "info": {
+            "name": "Creates a global wallet access control for this project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a global wallet access control for this project environment"
+        },
+        {
+          "info": {
+            "name": "Updates a global wallet access control for this project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Updates a global wallet access control for this project environment"
+        },
+        {
+          "info": {
+            "name": "Enable global wallet access control for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl/enable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Enable global wallet access control for this environment"
+        },
+        {
+          "info": {
+            "name": "Disabled global wallet access control for this environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl/disable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Disabled global wallet access control for this environment"
+        },
+        {
+          "info": {
+            "name": "Adds a domain to be allowed or blocked for global wallet access for this project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl/domains",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Adds a domain to be allowed or blocked for global wallet access for this project environment"
+        },
+        {
+          "info": {
+            "name": "Delete a global wallet access control domain by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/globalWallet/accessControl/domains/:globalWalletAccessControlDomainId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "globalWalletAccessControlDomainId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the global wallet access control domain"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a global wallet access control domain by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

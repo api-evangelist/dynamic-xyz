@@ -1,0 +1,557 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Waas API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Waas",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a new WAAS for a user given an identifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/create",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates a new WAAS wallet for a user given an email or userId. If an email is provided and it is not associated with an existing user this call will also create a new user."
+        },
+        {
+          "info": {
+            "name": "Authenticate for WAAS using api key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/authenticate",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Authenticate for WAAS using api key"
+        },
+        {
+          "info": {
+            "name": "Verify if an API key is valid for a specific environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/verifyApiKey",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Simple endpoint to verify if the provided API key (DYN_API_TOKEN) is valid and has access to the specified environment. Returns true if the token is verified, false otherwise."
+        },
+        {
+          "info": {
+            "name": "Sign a message with a delegated waas account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/delegatedAccess/signMessage",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Sign a message with a delegated waas account"
+        },
+        {
+          "info": {
+            "name": "Revoke delegated access for a single wallet",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/delegatedAccess",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ]
+          },
+          "docs": "Allows developers to revoke their own delegated access for a specific wallet\n"
+        },
+        {
+          "info": {
+            "name": "Revoke delegated access for one or more wallets",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/delegatedAccess/revoke",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Allows developers to revoke their own delegated access\n"
+        },
+        {
+          "info": {
+            "name": "Get delegated access encryption public keys for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/delegatedAccess/encryptionPublicKeys",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "includeAll",
+                "value": "",
+                "type": "query",
+                "description": "If true, returns all encryption public keys. Otherwise, returns only the latest active key."
+              }
+            ]
+          },
+          "docs": "Fetches the encryption public keys used for delegated access in a WAAS environment.\nBy default, returns only the latest active key. Use the includeAll query parameter to get all keys.\n"
+        },
+        {
+          "info": {
+            "name": "Create credentials for waas wallet delegation",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/delegatedAccess/encryptionPublicKeys",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create credentials for waas wallet delegation"
+        },
+        {
+          "info": {
+            "name": "Get a specific delegated access encryption public key by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/delegatedAccess/encryptionPublicKeys/:keyId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "keyId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the encryption public key"
+              }
+            ]
+          },
+          "docs": "Get a specific delegated access encryption public key by ID"
+        },
+        {
+          "info": {
+            "name": "Get a specific WAAS wallet by walletId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the WAAS wallet"
+              }
+            ]
+          },
+          "docs": "Get a specific WAAS wallet by walletId"
+        },
+        {
+          "info": {
+            "name": "Create backup action for key shares using API token authentication",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/keyShares/backup/locations",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Creates backup locations for wallet key shares. Requires API token authentication. Validates that the user belongs to the environment and that no client key shares exist for the wallet. This endpoint is intended for server-side integrations that need to backup key shares on behalf of users.\n"
+        },
+        {
+          "info": {
+            "name": "Get the WAAS policy for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/policies",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the WAAS policy for an environment"
+        },
+        {
+          "info": {
+            "name": "Create a new WAAS policy for an environment or add new rules to an existing policy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/policies",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new WAAS policy for an environment or add new rules to an existing policy"
+        },
+        {
+          "info": {
+            "name": "Update the WAAS policy for an environment by ruleId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/policies",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update the WAAS policy for an environment by ruleId"
+        },
+        {
+          "info": {
+            "name": "Delete a WAAS policy rule by ruleId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/policies",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete a WAAS policy rule by ruleId"
+        },
+        {
+          "info": {
+            "name": "Get all active WAAS signature policies for a wallet",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/signaturePolicy",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ]
+          },
+          "docs": "Get all active WAAS signature policies for a wallet"
+        },
+        {
+          "info": {
+            "name": "Create a new WAAS signature policy for a wallet",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/signaturePolicy",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new WAAS signature policy for a wallet"
+        },
+        {
+          "info": {
+            "name": "Get a WAAS signature policy by walletId and policyId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/signaturePolicy/:policyId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              },
+              {
+                "name": "policyId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the signature policy for the wallet"
+              }
+            ]
+          },
+          "docs": "Get a WAAS signature policy by walletId and policyId"
+        },
+        {
+          "info": {
+            "name": "Update a WAAS signature policy by walletId and policyId",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/signaturePolicy/:policyId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              },
+              {
+                "name": "policyId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the signature policy for the wallet"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a WAAS signature policy by walletId and policyId"
+        },
+        {
+          "info": {
+            "name": "Delete a WAAS signature policy by walletId and policyId",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/waas/:walletId/signaturePolicy/:policyId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "walletId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the wallet"
+              },
+              {
+                "name": "policyId",
+                "value": "",
+                "type": "path",
+                "description": "The ID of the signature policy for the wallet"
+              }
+            ]
+          },
+          "docs": "Delete a WAAS signature policy by walletId and policyId"
+        },
+        {
+          "info": {
+            "name": "Get delegated access encryption public key for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/sdk/:environmentId/waas/delegatedAccess/encryptionPublicKey",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Fetches the encryption public key used for delegated access in a WAAS environment.\nBy default, returns only the latest active key.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,283 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Allowlists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all allowlists for a environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/allowlists",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all allowlists for a environment"
+        },
+        {
+          "info": {
+            "name": "Create new allowlist for a environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/allowlists",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create new allowlist for a environment"
+        },
+        {
+          "info": {
+            "name": "Get allowlist by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get allowlist by id"
+        },
+        {
+          "info": {
+            "name": "Update the outcome, scope, or name of an allowlist entry by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Update the outcome, scope, or name of an allowlist entry by ID"
+        },
+        {
+          "info": {
+            "name": "Delete an allowlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete an allowlist"
+        },
+        {
+          "info": {
+            "name": "Enable the allowlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId/enable",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Enable the allowlist"
+        },
+        {
+          "info": {
+            "name": "Disable the allow list",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId/disable",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Disable the allow list"
+        },
+        {
+          "info": {
+            "name": "Get all entries for an allowlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId/entries",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              },
+              {
+                "name": "orderBy",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "The number of items to skip before starting to collect the result set"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The numbers of items to return"
+              },
+              {
+                "name": "query",
+                "value": "",
+                "type": "query",
+                "description": "Keywords to search for in alias, walletPublicKey, or email"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all entries for an allowlist"
+        },
+        {
+          "info": {
+            "name": "Create a new entry for an allowlist",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/allowlists/:allowlistId/entries",
+            "params": [
+              {
+                "name": "allowlistId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create a new entry for an allowlist"
+        },
+        {
+          "info": {
+            "name": "Delete an allowlist entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/allowlistEntries/:allowlistEntryId",
+            "params": [
+              {
+                "name": "allowlistEntryId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the allowlist entry"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete an allowlist entry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

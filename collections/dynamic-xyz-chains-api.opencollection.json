@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Chains API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Chains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get tokens for passed chainName.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/chains/:chainName/tokens",
+            "params": [
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              },
+              {
+                "name": "networkId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get tokens for passed chainName."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

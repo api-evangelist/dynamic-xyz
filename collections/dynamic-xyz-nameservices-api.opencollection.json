@@ -1,0 +1,176 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists NameServices API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "NameServices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the name service for the environment and chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ]
+          },
+          "docs": "Get the name service for the environment and chain"
+        },
+        {
+          "info": {
+            "name": "Create a new name service for the environment and chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new name service for the environment and chain"
+        },
+        {
+          "info": {
+            "name": "delete the name service for the environment and chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ]
+          },
+          "docs": "delete the name service for the environment and chain"
+        },
+        {
+          "info": {
+            "name": "Get the unsigned chain-specific message needed to be signed by the wallet owner using the wallet private key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName/signingMessage",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Get the unsigned chain-specific message needed to be signed by the wallet owner using the wallet private key"
+        },
+        {
+          "info": {
+            "name": "Enable name service for this environment and chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName/enable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ]
+          },
+          "docs": "Enable name service for this environment and chain"
+        },
+        {
+          "info": {
+            "name": "Disabled name service for this environment and chain",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/nameService/:chainName/disable",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "chainName",
+                "value": "EVM",
+                "type": "path",
+                "description": "Shortened chain name"
+              }
+            ]
+          },
+          "docs": "Disabled name service for this environment and chain"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

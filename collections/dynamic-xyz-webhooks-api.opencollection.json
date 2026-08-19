@@ -1,0 +1,238 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Webhooks API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the Webhooks for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get the Webhooks for an environment"
+        },
+        {
+          "info": {
+            "name": "Creates a new Webhooks for the project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new Webhooks for the project environment"
+        },
+        {
+          "info": {
+            "name": "Get the Webhook for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              },
+              {
+                "name": "includeSecret",
+                "value": "",
+                "type": "query",
+                "description": "Include secret in response"
+              }
+            ]
+          },
+          "docs": "Get the Webhook for an environment"
+        },
+        {
+          "info": {
+            "name": "Update the Webhook for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update the Webhook for an environment"
+        },
+        {
+          "info": {
+            "name": "Delete the Webhook for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              }
+            ]
+          },
+          "docs": "Delete the Webhook for an environment"
+        },
+        {
+          "info": {
+            "name": "Get the Messages for an webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId/messages",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "Cursor for pagination"
+              }
+            ]
+          },
+          "docs": "Get the Messages for an webhook"
+        },
+        {
+          "info": {
+            "name": "Get the Message deliveries for a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId/messages/:messageId",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              },
+              {
+                "name": "messageId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the message"
+              }
+            ]
+          },
+          "docs": "Get the Message deliveries for a webhook"
+        },
+        {
+          "info": {
+            "name": "Redeliver message for an webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/webhooks/:webhookId/messages/:messageId/redeliver",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              },
+              {
+                "name": "webhookId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the webhook"
+              },
+              {
+                "name": "messageId",
+                "value": "",
+                "type": "path",
+                "description": "UUID of the message"
+              }
+            ]
+          },
+          "docs": "Redeliver message for an webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

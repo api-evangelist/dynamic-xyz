@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Origins API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Origins",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all the allowed origins for a project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/origins",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ]
+          },
+          "docs": "Get all the allowed origins for a project environment"
+        },
+        {
+          "info": {
+            "name": "Adds an allowed origin for this project environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/origins",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adds an allowed origin for this project environment"
+        },
+        {
+          "info": {
+            "name": "Delete a origin by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/origins/:originId",
+            "params": [
+              {
+                "name": "originId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the origin"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a origin by id"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

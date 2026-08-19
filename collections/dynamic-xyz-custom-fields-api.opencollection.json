@@ -1,0 +1,141 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Dashboard Allowlists Custom Fields API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Custom Fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the custom fields for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/custom/fields",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get the custom fields for an environment"
+        },
+        {
+          "info": {
+            "name": "Create a new custom field for an environment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.dynamicauth.com/api/v0/environments/:environmentId/custom/fields",
+            "params": [
+              {
+                "name": "environmentId",
+                "value": "",
+                "type": "path",
+                "description": "ID of the environment"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create a new custom field for an environment"
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific custom field by its ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.dynamicauth.com/api/v0/custom/fields/:customFieldId",
+            "params": [
+              {
+                "name": "customFieldId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the custom field"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieve a specific custom field by its ID"
+        },
+        {
+          "info": {
+            "name": "Update an existing custom field by its ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.dynamicauth.com/api/v0/custom/fields/:customFieldId",
+            "params": [
+              {
+                "name": "customFieldId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the custom field to be updated"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Update an existing custom field by its ID"
+        },
+        {
+          "info": {
+            "name": "Delete a specific custom field by its ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.dynamicauth.com/api/v0/custom/fields/:customFieldId",
+            "params": [
+              {
+                "name": "customFieldId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the custom field to be deleted"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a specific custom field by its ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
