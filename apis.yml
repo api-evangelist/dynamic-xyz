@@ -63,6 +63,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/developer-dashboard/webhooks
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: Documentation
@@ -133,6 +135,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Custom Hostnames
+  tags_raw:
   - CustomHostnames
   properties:
   - type: OpenAPI
@@ -163,6 +167,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -173,6 +179,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Export
+  tags_raw:
   - Exports
   properties:
   - type: OpenAPI
@@ -255,6 +263,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - MFA
+  tags_raw:
   - Mfa
   properties:
   - type: OpenAPI
@@ -265,6 +275,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - MFA Settings
+  tags_raw:
   - MfaSettings
   properties:
   - type: OpenAPI
@@ -285,6 +297,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -305,6 +319,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
@@ -375,6 +391,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - User API Tokens
+  tags_raw:
   - UserApiTokens
   properties:
   - type: OpenAPI
@@ -385,6 +403,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -435,6 +455,8 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
