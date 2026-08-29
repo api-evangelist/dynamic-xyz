@@ -474,6 +474,9 @@ apis:
   - type: OpenAPI
     url: openapi/dynamic-xyz-webhooks-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/dynamic-xyz-capability-edges.yml
+    name: Dynamic Business Capability Map
   - type: AgenticAccess
     url: agentic-access/dynamic-xyz-agentic-access.yml
   - type: TrustCenter

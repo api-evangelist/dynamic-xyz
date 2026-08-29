@@ -1,0 +1,102 @@
+slug: dynamic-xyz
+provider: Dynamic
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 8
+edges:
+- tag: Webhooks
+  spec_file: dynamic-xyz-webhooks-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.88
+  evidence: createWebhook  Creates a new Webhooks for the project environment; getWebhookMessageDeliveries  Get
+    the Message deliveries for a webhook; redeliverWebhookMessage
+  reason: Full lifecycle of outbound webhook subscriptions plus message delivery inspection and redelivery
+    — exactly BC-4270.80 Webhook & Event Subscription Management (delivery reliability). Although webhooks
+    are often plumbing, here the API surface itself is the webhook subscription management product for
+    platform consumers.
+- tag: Mfa
+  spec_file: dynamic-xyz-mfa-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: resetAllMfaDevices "Delete all MFA Devices for the user"; resetUserMfa "Reset the user's MFA
+    methods"
+  reason: Administration of users' multi-factor authentication devices is squarely identity and access
+    management (authentication factor lifecycle).
+- tag: MfaSettings
+  spec_file: dynamic-xyz-mfasettings-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: enableMfaDeviceForOrganization "Enable the given mfa device for the organization"; schema
+    OrganizationMfaSettings
+  reason: Organisation-level policy for which MFA device types are permitted — authentication control
+    configuration, i.e. Identity & Access Management.
+- tag: Sessions
+  spec_file: dynamic-xyz-sessions-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.75
+  evidence: PUT /sessions/{sessionId}/revoke 'Revoke a session'; POST /environments/{environmentId}/users/sessions/revoke
+    'Revoke all sessions for an environment'; schema Session
+  reason: Session inspection and revocation is authentication/session lifecycle control. Since the vendor's
+    product is an authentication platform, identity & access management is the honest capability rather
+    than incidental plumbing.
+- tag: Analytics
+  spec_file: dynamic-xyz-analytics-api-openapi.yml
+  capability_id: BC-4280.30
+  capability_id_l1: BC-4280
+  capability_name: Product Usage Analytics
+  confidence: 0.7
+  evidence: GET /environments/{environmentId}/analytics/engagement  Get analytics engagement data; schemas
+    ActiveUsersTrendResult, SessionsTrendResult
+  reason: Read-only analytical views over end-user visits, sessions, active-user trends and wallet breakdowns
+    for a project environment — product usage analytics surfaced to the customer. Not financial or marketing
+    reporting; it is usage telemetry analysis.
+- tag: Members
+  spec_file: dynamic-xyz-members-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: updateMemberRole "Update a given members role"; getOrganizationMembers "Get all users that
+    are admins for an organization"; delegateOwnership
+  reason: Operations administer org membership, admin roles and ownership delegation — role and entitlement
+    administration for platform accounts, which is Identity & Access Management rather than HR.
+- tag: Tokens
+  spec_file: dynamic-xyz-tokens-api-openapi.yml
+  capability_id: BC-4270.40
+  capability_id_l1: BC-4270
+  capability_name: Developer Identity & Credential Management
+  confidence: 0.7
+  evidence: POST /environments/{environmentId}/tokens 'Create a new API Token'; schemas TokenScopes, CreateTokenResponse,
+    TokenCreatedBy
+  reason: Issuance, listing and revocation of scoped API tokens for a project environment is developer
+    credential stewardship for the platform's public API. Not the buyer's IAM estate, so the developer-platform
+    credential capability fits better than enterprise IAM.
+- tag: Users
+  spec_file: dynamic-xyz-users-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: POST /environments/{environmentId}/users 'Creates a new user'; GET /oauthAccounts/{oauthAccountId}/accessToken
+    'Get the access token for a user OAuth account'; POST .../users/{userId}/sessions/revoke
+  reason: 'Lifecycle of authenticated end-user identities — create/update/delete users, OAuth account
+    access tokens, session revocation — is identity & access management as delivered by this authentication
+    platform. Not customer master data: the records exist to authenticate, not to hold commercial customer
+    attributes.'
