@@ -6,6 +6,18 @@ description: Dynamic is a wallet and authentication platform offering embedded w
   social/email/passkey login, MPC signers, and a Backend / Admin REST API for managing
   users, wallets, and sessions. Provides SDKs across Web, React, React Native, Flutter,
   Swift, Kotlin, Node.js, Unity.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
