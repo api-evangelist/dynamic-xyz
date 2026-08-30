@@ -147,7 +147,7 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
-  - Custom Hostnames
+  - CustomHostnames
   tags_raw:
   - CustomHostnames
   properties:
@@ -275,7 +275,7 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
-  - MFA
+  - Mfa
   tags_raw:
   - Mfa
   properties:
@@ -287,7 +287,7 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
-  - MFA Settings
+  - MfaSettings
   tags_raw:
   - MfaSettings
   properties:
@@ -403,7 +403,7 @@ apis:
   humanURL: https://docs.dynamic.xyz/api-reference/overview
   baseURL: https://app.dynamicauth.com/api/v0
   tags:
-  - User API Tokens
+  - UserApiTokens
   tags_raw:
   - UserApiTokens
   properties:
